@@ -1,4 +1,4 @@
-##Overview
+Overview
 This script automates the generation of SQL CREATE TABLE commands in a Delta Lake environment based on configurations provided either directly in the code or through a CSV file. It allows users to define table structures, including column names, data types, nullability, partitioning, and other properties.
 
 Code Breakdown
