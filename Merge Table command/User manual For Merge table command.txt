@@ -1,0 +1,39 @@
+Merge Command Automation: Description and Usage Instructions
+Overview
+This script automates the generation of SQL MERGE INTO commands in a Delta Lake environment. Users can define merge configurations through direct code inputs, allowing for flexible updates, inserts, and deletions based on the state of the source table.
+
+Code Breakdown
+Block 1: Initialization
+Initialize the following variables:
+Source Table:
+s_table - Name of the source table (e.g., "cba").
+Target Table:
+t_table - Name of the target table (e.g., "abc").
+Column Definitions:
+s_column - List of columns in the source table (e.g., ['emp', 'id']).
+t_column - List of columns in the target table (e.g., ['emp', 'id']).
+s_pk_list - Primary key list for the source table (e.g., ['id', 'emp']).
+t_pk_list - Primary key list for the target table (e.g., ['id', 'emp']).
+Block 2: Merge Command Without Deletion
+Constructs a SQL MERGE INTO command that:
+Updates records in the target table based on matching records in the source table.
+Does not delete records from the target if they are missing from the source.
+Block 3: Merge Command With Deletion
+Constructs a SQL MERGE INTO command that:
+Updates records in the target table based on matching records in the source table.
+Inserts new records if they don't match.
+Deletes records in the target table that are no longer present in the source.
+
+Usage Instructions
+Direct Code Input:
+
+Define merge configurations directly in the script by setting the following variables:
+s_table: Name of the source table.
+t_table: Name of the target table.
+s_column: List of columns in the source table.
+t_column: List of columns in the target table.
+s_pk_list: Primary key list for the source table.
+t_pk_list: Primary key list for the target table.
+Executing the Script:
+
+After populating the variables, run the script to generate the appropriate MERGE INTO SQL commands. The script will output the generated SQL command based on the defined conditions.
